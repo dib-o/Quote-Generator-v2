@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border
+  m-0 p-0
+  outline-none border-none
+  no-underline
+  font-[DynaPuff];
+}
+
+html {
+  @apply text-[62.5%]
+  overflow-x-hidden;
+}
+
+@media (width < 1000px) {
+  html {
+    @apply text-[55%];
+  }
+}
+
+@media (width < 800px) {
+  html {
+    @apply text-[50%];
+  }
+}
+
+@media (width < 700px) {
+  html {
+    @apply text-[45%];
+  }
+}
+
+@media (width < 600px) {
+  html {
+    @apply text-[40%];
+  }
+}
