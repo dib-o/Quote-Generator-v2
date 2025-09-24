@@ -100,7 +100,7 @@ const App = () => {
   const [num, setNum] = useState(0);
   const [fade, setFade] = useState(false);
   const [fadeQuote, setFadeQuote] = useState(false);
-  const [mute, setMute] = useState(true);
+  const [mute, setMute] = useState(false);
   const [bgUrl, setBgUrl] = useState("");
 
   const [start, setStart] = useState(false);
@@ -250,7 +250,7 @@ const App = () => {
     console.log(screenWidth);
     setFadeQuote(true);
     setTimeout(() => {
-      let randomGenre = 1;
+      let randomGenre = Math.floor(Math.random() * genres.length);
       let randomQuote = Math.floor(Math.random() * genres[randomGenre].length);
 
       while (genreQsRef.current[randomGenre].includes(randomQuote)) {
